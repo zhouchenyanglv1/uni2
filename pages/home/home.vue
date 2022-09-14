@@ -1,5 +1,6 @@
 <template>
 	<view>
+    <my-search></my-search>
 		<!-- 轮播图 -->
 		<swiper :indicator-dots="true" :autoplay="true" :circular="true" :duration="1000" :interval="2000">
 			<navigator class="swiper-item" v-for="item in swiperList" :key="item.goods_id"

@@ -1,0 +1,9 @@
+<template>
+  <view>
+    search2
+  </view>
+</template>
+<script>
+</script>
+<style>
+</style>
