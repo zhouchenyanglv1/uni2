@@ -9042,9 +9042,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 5 */
-/*!*****************************************************!*\
-  !*** E:/nodetest/uni-shop/uni-shop-home/pages.json ***!
-  \*****************************************************/
+/*!******************************!*\
+  !*** D:/vue/uni2/pages.json ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9185,9 +9185,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 12 */
-/*!*************************************************************************************************************!*\
-  !*** E:/nodetest/uni-shop/uni-shop-home/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
-  \*************************************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/vue/uni2/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
