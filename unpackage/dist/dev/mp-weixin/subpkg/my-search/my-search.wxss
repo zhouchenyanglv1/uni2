@@ -31,11 +31,15 @@
   background-color: #ff0000;
   z-index: 100;
 }
-.history-title {
+.history-title-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120rpx;
+}
+.history-title-box .history-title {
   display: block;
   margin-left: 30rpx;
   font-size: 32rpx;
-  margin-top: 120rpx;
 }
 .history {
   display: flex;

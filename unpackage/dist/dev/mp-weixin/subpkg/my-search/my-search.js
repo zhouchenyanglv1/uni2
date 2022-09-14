@@ -180,6 +180,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -191,7 +196,8 @@ var _default =
 
       timer: null,
       searchList: [],
-      wh: 0 };
+      wh: 0,
+      historyList: [] };
 
   },
   methods: {
@@ -224,7 +230,18 @@ var _default =
                   uni.$showMsg();
                 }
                 console.log(data);
-                _this2.searchList = data.message.goods;case 10:case "end":return _context.stop();}}}, _callee);}))();
+
+
+
+                _this2.searchList = data.message.goods;
+                _this2.historyList.forEach(function (item) {
+                  if (item === _this2.searchValue) {
+                    var index = _this2.historyList.findIndex(function (item) {return item === _this2.searchValue;});
+                    _this2.historyList.splice(index, 1);
+                  }
+                });
+                _this2.historyList.push(_this2.searchValue);case 12:case "end":return _context.stop();}}}, _callee);}))();
+
     },
     refresh: function refresh() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _this3$searchList;var _yield$uni$$http$get2, data;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
                 _this3.page.pagenum += 1;_context2.next = 3;return (
@@ -240,6 +257,17 @@ var _default =
                 console.log(data);
                 (_this3$searchList = _this3.searchList).push.apply(_this3$searchList, _toConsumableArray(data.message.goods));case 8:case "end":return _context2.stop();}}}, _callee2);}))();
 
+    },
+    goToGoodsDetail: function goToGoodsDetail(item) {
+      uni.navigateTo({
+        url: '/subpkg/goods_detail/goods_detail?goods_id=' + item.goods_id });
+
+    },
+    inputHistory: function inputHistory(item) {
+      this.searchValue = item;
+    },
+    delHistory: function delHistory() {
+      this.historyList = [];
     } },
 
   onLoad: function onLoad() {

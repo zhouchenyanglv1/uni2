@@ -6,13 +6,18 @@
 				@cancel="cancel" @clear="clear" radius="100" cancelButton="none"></uni-search-bar>
 		</view>
 		<!-- 历史记录 -->
-		<view class="history-title"  v-if="searchValue.length===0">历史记录</view>
-		<view class="history"  v-if="searchValue.length===0">
-			<view class="history-item">a</view>
+		<view class="history-title-box" v-if="searchValue.length===0 && historyList.length>=1">
+			<view class="history-title" >历史记录</view>
+			<uni-icons type="trash" size="20" @click="delHistory"></uni-icons>
+		</view>
+		<view class="history" v-if="searchValue.length===0">
+			<view class="history-item" v-for="(item,index) in historyList" :key="index" @click="inputHistory(item)">
+				{{item}}
+			</view>
 		</view>
 		<!-- 搜索列表 -->
 		<scroll-view class="search-list" @scrolltolower="refresh" scroll-y="true" :style="{height: wh+'px'}">
-			<view class="search-item" v-for="(item,index) in searchList" :key="index">
+			<view class="search-item" v-for="(item,index) in searchList" :key="index" @click="goToGoodsDetail(item)">
 				<text class="search-text">{{item.goods_name}}</text>
 				<uni-icons type="forward" size="20" class="search-icon"></uni-icons>
 			</view>
@@ -31,7 +36,8 @@
 				},
 				timer: null,
 				searchList: [],
-				wh:0
+				wh: 0,
+				historyList: []
 			};
 		},
 		methods: {
@@ -46,8 +52,8 @@
 				}, 500)
 			},
 			clear() {
-				 this.page.pagenum = 1
-				 this.searchList = []
+				this.page.pagenum = 1
+				this.searchList = []
 			},
 			async getList() {
 				if (this.searchValue.length === 0) {
@@ -64,7 +70,18 @@
 					uni.$showMsg()
 				}
 				console.log(data)
+
+
+
 				this.searchList = data.message.goods
+				this.historyList.forEach(item => {
+					if (item === this.searchValue) {
+						const index = this.historyList.findIndex(item => item === this.searchValue)
+						this.historyList.splice(index, 1)
+					}
+				})
+				this.historyList.push(this.searchValue)
+
 			},
 			async refresh() {
 				this.page.pagenum += 1
@@ -80,11 +97,22 @@
 				console.log(data)
 				this.searchList.push(...data.message.goods)
 
+			},
+			goToGoodsDetail(item) {
+				uni.navigateTo({
+					url: '/subpkg/goods_detail/goods_detail?goods_id=' + item.goods_id
+				})
+			},
+			inputHistory(item) {
+				this.searchValue = item
+			},
+			delHistory(){
+				this.historyList = []
 			}
 		},
-		onLoad(){
-		   const res = 	uni.getSystemInfoSync()
-		   this.wh = res.windowHeight
+		onLoad() {
+			const res = uni.getSystemInfoSync()
+			this.wh = res.windowHeight
 		}
 	}
 </script>
@@ -96,15 +124,19 @@
 		top: 0;
 		background-color: #ff0000;
 		z-index: 100;
-		 
-	}
 
+	}
+.history-title-box{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 120rpx;
 	.history-title {
 		display: block;
 		margin-left: 30rpx;
 		font-size: 32rpx;
-		margin-top: 120rpx;
 	}
+}
+	
 
 	.history {
 		display: flex;
@@ -121,6 +153,7 @@
 
 	.search-list {
 		margin-top: 120rpx;
+
 		.search-item {
 			position: relative;
 			width: 100%;
