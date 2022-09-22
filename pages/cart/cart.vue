@@ -1,19 +1,89 @@
 <template>
-  <view>
-    cart
-  </view>
+	<view>
+		<!-- 地址部分 -->
+		<view>地址部分</view>
+		<!-- 购物车主体 -->
+		<view class="cart-container">
+			<!-- 头部标题 -->
+			<view class="title">
+				<uni-icons type="shop" size="20"></uni-icons>
+				<view class="title-name">购物车</view>
+			</view>
+			<!-- 购物车列表 -->
+			<item-list :searchList = cart :showRadio="true"  :showNum="true"   @check-change="radioHandler"  @value-change2="valueHandler2"  @value-change="valueHandler" ></item-list>
+		</view>
+	</view>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        
-      };
-    }
-  }
+	import tabCart from '@/mixins/tabbar-cart-badge.js'
+	import { mapMutations } from 'vuex'
+	import {
+		mapState
+	} from 'vuex'
+	export default {
+		mixins: [tabCart],
+		computed: {
+			...mapState('m_cart', ['cart'])
+		},
+		data() {
+			return {
+				getId:0
+			};
+		},
+		methods:{
+		    ...mapMutations('m_cart',['checkCartItem','saveCart','valueCartItem']),
+			radioHandler(item){
+				this.checkCartItem(item.goods_id)
+				this.setBadge()  
+			},
+			valueHandler(e){
+				const goods = {id:this.getId,count:e}
+				this.valueCartItem(goods)
+				this.setBadge() 
+ 
+				 
+			},
+			valueHandler2(id){			 
+				this.getId = id
+			}
+		}
+
+	}
 </script>
 
 <style lang="scss">
+	.cart-container {
 
+		.title {
+			display: flex;
+			align-items: center;
+
+			.title-name {
+				margin-left: 10rpx;
+				font-size: 30rpx;
+			}
+		}
+		.list{
+			.item{
+				display: flex;
+				padding-top: 30rpx;
+				padding-bottom: 30rpx;
+				border-top: 1px solid #f7f7f7;
+				.small-image{
+					width: 100px;
+				}
+				.item-contain{
+					display: flex;
+					width: 100%;
+					flex-direction: column;
+					justify-content: space-between;
+					.price-count{
+						display: flex;
+						justify-content: space-between;
+					}
+				}
+			}
+		}
+	}
 </style>

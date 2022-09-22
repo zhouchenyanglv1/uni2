@@ -43,7 +43,9 @@
 </template>
 
 <script>
-	export default {
+  import tabCart from '@/mixins/tabbar-cart-badge.js'
+  export default {
+	mixins:[tabCart],
 		data() {
 			return {
 				swiperList: [],

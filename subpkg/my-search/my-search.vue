@@ -2,7 +2,7 @@
 	<view>
 		<!-- 搜索栏 -->
 		<view class="search-box">
-			<uni-search-bar placeholder="请输入搜索内容" focus v-model="searchValue" @focus="focus" @input="input"
+			<uni-search-bar placeholder="请输入搜索内容" focus v-model="searchValue"  @input="input"
 				@cancel="cancel" @clear="clear" radius="100" cancelButton="none"></uni-search-bar>
 		</view>
 		<!-- 历史记录 -->
@@ -41,10 +41,7 @@
 			};
 		},
 		methods: {
-
-			focus() {
-				console.log('focus');
-			},
+ 
 			input() {
 				clearTimeout(this.timer)
 				this.timer = setTimeout(() => {
@@ -69,7 +66,6 @@
 				if (data.meta.status !== 200) {
 					uni.$showMsg()
 				}
-				console.log(data)
 
 
 
@@ -80,7 +76,8 @@
 						this.historyList.splice(index, 1)
 					}
 				})
-				this.historyList.push(this.searchValue)
+				this.historyList.unshift(this.searchValue)
+				uni.setStorageSync('historyList',JSON.stringify(this.historyList))
 
 			},
 			async refresh() {
@@ -94,9 +91,9 @@
 				if (data.meta.status !== 200) {
 					uni.$showMsg()
 				}
-				console.log(data)
 				this.searchList.push(...data.message.goods)
-
+				
+ 
 			},
 			goToGoodsDetail(item) {
 				uni.navigateTo({
@@ -113,6 +110,7 @@
 		onLoad() {
 			const res = uni.getSystemInfoSync()
 			this.wh = res.windowHeight
+			this.historyList = JSON.parse(uni.getStorageSync('historyList') || '[]' )
 		}
 	}
 </script>

@@ -78,7 +78,8 @@
                     "style" :                                                                                    
                 {
                     "navigationBarTitleText": "商品列表",
-                    "enablePullDownRefresh": false
+                    "enablePullDownRefresh": true,
+					"onReachBottomDistance": 50
                 }
                 
                 }
@@ -86,7 +87,7 @@
                     "path" : "my-search/my-search",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
+                    "navigationBarTitleText": "商品搜索",
                     "enablePullDownRefresh": false
                 }
                 
