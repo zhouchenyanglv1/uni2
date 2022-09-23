@@ -1,6 +1,11 @@
 	import {mapGetters , mapState} from 'vuex'
 	
 	export default {
+    watch:{
+      total(){
+        this.setBadge()
+      }
+    },
 		computed:{
 				  ...mapGetters('m_cart',['total'])
  

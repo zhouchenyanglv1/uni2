@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<!-- 地址部分 -->
-		<view>地址部分</view>
+		<my-address></my-address>
 		<!-- 购物车主体 -->
 		<view class="cart-container">
 			<!-- 头部标题 -->
@@ -10,7 +10,7 @@
 				<view class="title-name">购物车</view>
 			</view>
 			<!-- 购物车列表 -->
-			<item-list :searchList = cart :showRadio="true"  :showNum="true"   @check-change="radioHandler"  @value-change2="valueHandler2"  @value-change="valueHandler" ></item-list>
+			<item-list :searchList = cart :showRadio="true"  :showNum="true"   @check-change="radioHandler"  @value-change2="valueHandler2"  @value-change="valueHandler" @del-item = "delItem" ></item-list>
 		</view>
 	</view>
 </template>
@@ -32,10 +32,10 @@
 			};
 		},
 		methods:{
-		    ...mapMutations('m_cart',['checkCartItem','saveCart','valueCartItem']),
+		    ...mapMutations('m_cart',['checkCartItem','saveCart','valueCartItem','delCartItem']),
 			radioHandler(item){
 				this.checkCartItem(item.goods_id)
-				this.setBadge()  
+			 
 			},
 			valueHandler(e){
 				const goods = {id:this.getId,count:e}
@@ -46,7 +46,12 @@
 			},
 			valueHandler2(id){			 
 				this.getId = id
-			}
+			},
+      delItem(){
+        const id = this.getId
+        this.delCartItem(id)
+        
+      }
 		}
 
 	}
@@ -58,9 +63,10 @@
 		.title {
 			display: flex;
 			align-items: center;
+      vertical-align: middle;
 
 			.title-name {
-				margin-left: 10rpx;
+				margin-left: 20rpx;
 				font-size: 30rpx;
 			}
 		}

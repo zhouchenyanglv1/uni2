@@ -35,7 +35,13 @@ export default {
 		         	}
 		         }) 
 		         this.commit('m_cart/saveCart')
-		}
+		},
+    delCartItem(state,id){
+     state.cart =   state.cart.filter((item,index)=>{
+         return  item.goods_id !== id
+      })
+       this.commit('m_cart/saveCart')
+    }
 	},
 	
 	actions:{},

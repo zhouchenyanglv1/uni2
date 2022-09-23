@@ -3,7 +3,7 @@
 		<view class="search-scroll">
 			<uni-swipe-action class="swiper-action">
 			<view class="search-item-box" v-for="(item,index) in searchList" :key="index" >			 
-			 <uni-swipe-action-item class="swiper-action-item" :right-options="options" :left-options="options" @click="onClick"  > 
+			 <uni-swipe-action-item class="swiper-action-item" :right-options="options"   @click="onClick" @change="clickValue(item.goods_id)" > 
 				<view class="search-image" @click="click(item)" >
 					<radio :checked="item.goods_state" color="#ff0000" style="margin-left: 5rpx;"  v-if="showRadio" ></radio>
 					<!-- 	<image class="search-image-big" :src="item.goods_small_logo" mode="widthFix"></image> -->
@@ -24,18 +24,13 @@
 </template>
 
 <script>
-
 	export default {
 		name: "item-list",
 		data() {
 			return {
+        shopId:0,
 				options:[
-				        {
-				            text: '取消',
-				            style: {
-				                backgroundColor: '#007aff'
-				            }
-				        }, {
+				      {
 				            text: '确认',
 				            style: {
 				                backgroundColor: '#dd524d'
@@ -72,12 +67,11 @@
 			clickValue(id){
 				 this.$emit('value-change2',id)
 			},
-			onClick(e){
-			      console.log('点击了'+(e.position === 'left' ? '左侧' : '右侧') + e.content.text + '按钮')
-			    }, 
-			swipeChange(e,index){
-			      console.log('当前状态：'+ e +'，下标：' + index)
-			    }
+			onClick(){
+			    this.$emit('del-item')
+			}, 
+		 
+  
 			  
 		}
 	}
