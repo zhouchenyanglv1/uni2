@@ -2629,24 +2629,6 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 119:
-/*!*****************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/index.js ***!
-  \*****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 120));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 121));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 122));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
-{
-  en: _en.default,
-  'zh-Hans': _zhHans.default,
-  'zh-Hant': _zhHant.default };exports.default = _default;
-
-/***/ }),
-
 /***/ 12:
 /*!*******************************************************************************************!*\
   !*** E:/nodetest/uni2/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
@@ -2732,7 +2714,25 @@ var $http = new Request();exports.$http = $http;
 
 /***/ }),
 
-/***/ 120:
+/***/ 121:
+/*!*****************************************************************************************!*\
+  !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/index.js ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 122));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 123));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 124));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+{
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default };exports.default = _default;
+
+/***/ }),
+
+/***/ 122:
 /*!****************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/en.json ***!
   \****************************************************************************************/
@@ -2743,7 +2743,7 @@ module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"shop\",\"uni-good
 
 /***/ }),
 
-/***/ 121:
+/***/ 123:
 /*!*********************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hans.json ***!
   \*********************************************************************************************/
@@ -2754,7 +2754,7 @@ module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店铺\",\"uni-go
 
 /***/ }),
 
-/***/ 122:
+/***/ 124:
 /*!*********************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hant.json ***!
   \*********************************************************************************************/
@@ -2790,7 +2790,7 @@ store;exports.default = _default;
 
 /***/ }),
 
-/***/ 130:
+/***/ 132:
 /*!*******************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
   \*******************************************************************************************/
@@ -2798,9 +2798,9 @@ store;exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 131));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 132));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 133));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 133));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 134));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 135));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -2808,7 +2808,7 @@ var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 1
 
 /***/ }),
 
-/***/ 131:
+/***/ 133:
 /*!******************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
   \******************************************************************************************/
@@ -2819,7 +2819,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 /***/ }),
 
-/***/ 132:
+/***/ 134:
 /*!***********************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \***********************************************************************************************/
@@ -2830,7 +2830,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 /***/ }),
 
-/***/ 133:
+/***/ 135:
 /*!***********************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \***********************************************************************************************/
@@ -4098,7 +4098,7 @@ module.exports = index_cjs;
 
 /***/ }),
 
-/***/ 146:
+/***/ 148:
 /*!***********************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpwxs.js ***!
   \***********************************************************************************************/
@@ -4192,7 +4192,7 @@ mpMixins;exports.default = _default;
 
 /***/ }),
 
-/***/ 147:
+/***/ 149:
 /*!**************************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/bindingx.js ***!
   \**************************************************************************************************/
@@ -4505,7 +4505,94 @@ bindIngXMixins;exports.default = _default;
 
 /***/ }),
 
-/***/ 148:
+/***/ 15:
+/*!**************************************!*\
+  !*** E:/nodetest/uni2/store/cart.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  namespaced: true,
+
+  state: function state() {return {
+      cart: JSON.parse(uni.getStorageSync('cart') || '[]'),
+      checkAll: true };},
+
+
+  mutations: {
+    addToCart: function addToCart(state, goods) {
+      var resFind = state.cart.find(function (item) {return item.goods_id === goods.goods_id;});
+      if (!resFind) {
+        state.cart.push(goods);
+      } else {
+        resFind.goods_count++;
+      }
+    },
+    saveCart: function saveCart(state) {
+      uni.setStorageSync('cart', JSON.stringify(state.cart));
+    },
+    checkCartItem: function checkCartItem(state, id) {
+      state.cart.forEach(function (item, index) {
+        if (item.goods_id === id) {
+          item.goods_state = !item.goods_state;
+
+        }
+      });
+      this.commit('m_cart/saveCart');
+
+    },
+    valueCartItem: function valueCartItem(state, goods) {
+      state.cart.forEach(function (item, index) {
+        if (item.goods_id === goods.id) {
+          item.goods_count = goods.count;
+
+        }
+      });
+      this.commit('m_cart/saveCart');
+    },
+    delCartItem: function delCartItem(state, id) {
+      state.cart = state.cart.filter(function (item, index) {
+        return item.goods_id !== id;
+      });
+      this.commit('m_cart/saveCart');
+    },
+    updateCheckedAll: function updateCheckedAll(state, newCheck) {
+      state.cart.forEach(function (item) {
+        item.goods_state = newCheck;
+      });
+      state.checkAll = newCheck;
+    } },
+
+
+  actions: {},
+
+  getters: {
+    total: function total(state) {
+      var count = 0;
+      var arr = state.cart.filter(function (item) {return item.goods_state === true;});
+      arr.forEach(function (item) {return count += item.goods_count;});
+      return count;
+    },
+    priceTotal: function priceTotal(state) {
+      var price = 0;
+      var arr = state.cart.filter(function (item) {return item.goods_state === true;});
+      arr.forEach(function (item) {return price += item.goods_price * item.goods_count;});
+      return price;
+    },
+    watchCheckAll: function watchCheckAll(state) {
+      var check = true;
+      state.cart.forEach(function (item) {
+        if (item.goods_state === false) {return check = false;}
+      });
+      return check;
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 150:
 /*!*************************************************************************************************!*\
   !*** E:/nodetest/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpother.js ***!
   \*************************************************************************************************/
@@ -4775,93 +4862,6 @@ otherMixins;exports.default = _default;
 
 /***/ }),
 
-/***/ 15:
-/*!**************************************!*\
-  !*** E:/nodetest/uni2/store/cart.js ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
-  namespaced: true,
-
-  state: function state() {return {
-      cart: JSON.parse(uni.getStorageSync('cart') || '[]'),
-      checkAll: true };},
-
-
-  mutations: {
-    addToCart: function addToCart(state, goods) {
-      var resFind = state.cart.find(function (item) {return item.goods_id === goods.goods_id;});
-      if (!resFind) {
-        state.cart.push(goods);
-      } else {
-        resFind.goods_count++;
-      }
-    },
-    saveCart: function saveCart(state) {
-      uni.setStorageSync('cart', JSON.stringify(state.cart));
-    },
-    checkCartItem: function checkCartItem(state, id) {
-      state.cart.forEach(function (item, index) {
-        if (item.goods_id === id) {
-          item.goods_state = !item.goods_state;
-
-        }
-      });
-      this.commit('m_cart/saveCart');
-
-    },
-    valueCartItem: function valueCartItem(state, goods) {
-      state.cart.forEach(function (item, index) {
-        if (item.goods_id === goods.id) {
-          item.goods_count = goods.count;
-
-        }
-      });
-      this.commit('m_cart/saveCart');
-    },
-    delCartItem: function delCartItem(state, id) {
-      state.cart = state.cart.filter(function (item, index) {
-        return item.goods_id !== id;
-      });
-      this.commit('m_cart/saveCart');
-    },
-    updateCheckedAll: function updateCheckedAll(state, newCheck) {
-      state.cart.forEach(function (item) {
-        item.goods_state = newCheck;
-      });
-      state.checkAll = newCheck;
-    } },
-
-
-  actions: {},
-
-  getters: {
-    total: function total(state) {
-      var count = 0;
-      var arr = state.cart.filter(function (item) {return item.goods_state === true;});
-      arr.forEach(function (item) {return count += item.goods_count;});
-      return count;
-    },
-    priceTotal: function priceTotal(state) {
-      var price = 0;
-      var arr = state.cart.filter(function (item) {return item.goods_state === true;});
-      arr.forEach(function (item) {return price += item.goods_price * item.goods_count;});
-      return price;
-    },
-    watchCheckAll: function watchCheckAll(state) {
-      var check = true;
-      state.cart.forEach(function (item) {
-        if (item.goods_state === false) {return check = false;}
-      });
-      return check;
-    } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
 /***/ 16:
 /*!**************************************!*\
   !*** E:/nodetest/uni2/store/user.js ***!
@@ -4875,13 +4875,18 @@ otherMixins;exports.default = _default;
 
   state: function state() {return {
       address: JSON.parse(uni.getStorageSync('address') || '{}'),
-      token: '' };},
+      token: '',
+      userInfo: JSON.parse(uni.getStorageSync('userInfo') || '{}') };},
 
 
   mutations: {
     saveAddress: function saveAddress(state, object) {
       state.address = object;
       uni.setStorageSync('address', JSON.stringify(object));
+    },
+    saveUserInfo: function saveUserInfo(state, object) {
+      state.userInfo = object;
+      uni.setStorageSync('userInfo', JSON.stringify(object));
     } },
 
 

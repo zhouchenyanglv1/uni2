@@ -3,13 +3,18 @@ export default{
 	
 	state:()=>({
 		address: JSON.parse(uni.getStorageSync('address')|| '{}'),
-		token:''
+		token:'',
+		userInfo: JSON.parse(uni.getStorageSync('userInfo') || '{}') 
 	}),
 	
 	mutations:{
 		saveAddress(state,object){
 			state.address = object
 			uni.setStorageSync('address',JSON.stringify(object))
+		},
+		saveUserInfo(state,object){
+			state.userInfo = object
+			uni.setStorageSync('userInfo',JSON.stringify(object))
 		}
 		
 	},

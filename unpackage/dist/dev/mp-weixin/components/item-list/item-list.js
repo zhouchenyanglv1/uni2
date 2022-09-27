@@ -208,13 +208,13 @@ var components
 try {
   components = {
     uniSwipeAction: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action */ "uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action.vue */ 136))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action */ "uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action.vue */ 138))
     },
     uniSwipeActionItem: function() {
-      return Promise.all(/*! import() | uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item.vue */ 141))
+      return Promise.all(/*! import() | uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item.vue */ 143))
     },
     uniNumberBox: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-number-box/components/uni-number-box/uni-number-box */ "uni_modules/uni-number-box/components/uni-number-box/uni-number-box").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-number-box/components/uni-number-box/uni-number-box.vue */ 153))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-number-box/components/uni-number-box/uni-number-box */ "uni_modules/uni-number-box/components/uni-number-box/uni-number-box").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-number-box/components/uni-number-box/uni-number-box.vue */ 155))
     }
   }
 } catch (e) {
