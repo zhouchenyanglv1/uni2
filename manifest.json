@@ -55,8 +55,10 @@
             "urlCheck" : false,
             "es6" : true
         },
-        "usingComponents" : true
-    },
+        "usingComponents" : true ,
+        "requiredPrivateInfos":[ "getLocation", "chooseAddress" ] 
+
+    }, 
     "mp-alipay" : {
         "usingComponents" : true
     },

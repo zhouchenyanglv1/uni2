@@ -5,18 +5,18 @@
       <button class="choose-address-button" @click="chooseAddress">请选择收货地址</button>
     </view>
     <!-- 地址渲染页面 -->
-    <view class="address-box" v-else>
+    <view class="address-box" v-else @click="chooseAddress">
       <view class="row1">
-        <view class="name">姓名:hahaha</view>
+        <view class="name">姓名: {{address.userName}}</view>
         <view class="phone-arrow">
-          <view class="phone">电话:13888888888</view>
+          <view class="phone">电话:{{address.telNumber}}</view>
           <uni-icons type="right" size="16"></uni-icons>
         </view>
 
       </view>
       <view class="row2">
         <view class="address-left">地址:</view>
-        <view class="address-right">上海市静安区肇嘉浜路888号11号402室</view>
+        <view class="address-right">{{addressStr}}</view>
       </view>
     </view>
 
@@ -26,19 +26,29 @@
 </template>
 
 <script>
+import  {mapMutations,mapState ,mapGetters}   from 'vuex'
   export default {
     name: "my-address",
     data() {
       return {
-        address:{}
+	
+         
       };
     },
     methods:{
+	 ...mapMutations('m_user',['saveAddress']),
      async chooseAddress(){
-        const res = await uni.chooseAddress() 
-        
+        const [err,res] = await uni.chooseAddress().catch(err=>err)
+        if(err === null && res.errMsg === 'chooseAddress:ok'){
+			this.saveAddress(res)
+			console.log(this.address);
+		}
       }
-    }
+    },
+	computed:{
+	    ...mapState('m_user',['address']),
+		...mapGetters('m_user',['addressStr'])
+	}
   }
 </script>
 
@@ -78,7 +88,7 @@
         white-space: nowrap;
       }
       .address-right{
-        margin-left: 20rpx;
+        margin-left: 10rpx;
       }
     }
   }

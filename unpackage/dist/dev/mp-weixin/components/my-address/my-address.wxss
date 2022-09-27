@@ -58,6 +58,6 @@
   white-space: nowrap;
 }
 .address-box .row2 .address-right {
-  margin-left: 20rpx;
+  margin-left: 10rpx;
 }
 

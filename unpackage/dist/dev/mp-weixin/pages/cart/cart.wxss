@@ -33,23 +33,50 @@
   margin-left: 20rpx;
   font-size: 30rpx;
 }
-.cart-container .list .item {
-  display: flex;
-  padding-top: 30rpx;
-  padding-bottom: 30rpx;
-  border-top: 1px solid #f7f7f7;
+.cart-container .list-box {
+  padding-bottom: 100rpx;
 }
-.cart-container .list .item .small-image {
-  width: 100px;
-}
-.cart-container .list .item .item-contain {
+.cart-container .check-box {
+  position: fixed;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
   width: 100%;
-  flex-direction: column;
-  justify-content: space-between;
+  border-top: 1px solid #f6f6f6;
+  bottom: 0rpx;
+  left: 0;
+  z-index: 999;
+  background-color: white;
 }
-.cart-container .list .item .item-contain .price-count {
+.cart-container .check-box .left {
   display: flex;
-  justify-content: space-between;
+}
+.cart-container .check-box .center {
+  display: flex;
+  color: red;
+}
+.cart-container .check-box .right {
+  width: 25%;
+  height: 100%;
+}
+.cart-container .check-box .right .pay {
+  height: 99%;
+  background-color: #ff0000;
+  border-radius: 2px;
+  color: white;
+  font-size: 36rpx;
+  font-weight: 500;
+  text-align: center;
+  line-height: 100rpx;
+}
+.empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty-cart image {
+  width: 360rpx;
+  height: 300rpx;
 }
 
