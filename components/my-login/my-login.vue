@@ -26,7 +26,7 @@
 			};
 		},
 		methods: {
-			...mapMutations('m_user',['saveUserInfo']),
+			...mapMutations('m_user',['saveUserInfo','saveToken','saveAddress']),
 			getUserInfo() {
 				uni.getUserProfile({
 					desc: '你的授权信息',
@@ -34,12 +34,53 @@
 						// 将信息存到 vuex 中
 						 console.log(res);
 					     this.saveUserInfo(res.userInfo)	
+               this.getToken(res)
 					},
 					fail: (res) => {
 						return uni.$showMsg('您取消了登录授权')
 					}
 				})
-			}
+			},
+     async getToken(info){
+       let query = {}
+       const  [err,res] =await uni.login().catch(err=>err)
+        if(err || res.errMsg!=='login:ok') return uni.$showMsg('登录失败!')
+           query = {
+             encryptedData: info.encryptedData,
+             rawData:info.rawData,
+             iv:info.iv,
+             signature:info.signature,
+             code:res.code
+          }
+       console.log(query);
+       this.getRealInfo(query)
+     },
+     async getRealInfo(query){
+        const {data} = await uni.$http.get('/api/public/v1/users/wxlogin',query)
+        console.log(data);
+        if(data.meta.status===404){
+          const key = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE1NjQ3MzAwNzksImV4cCI6MTAwMTU2NDczMDA3OH0.YPt-XeLnjV-_1ITaXGY2FhxmCe4NvXuRnRB8OMCfnPo'
+          this.saveToken( key )
+          uni.$showMsg('登录成功')
+        }
+     },
+    logout(){
+       uni.showModal({
+        title:'提示',
+        content:'确定退出吗?',
+        success: function(res){
+          if(res.cancel){
+             uni.$showMsg('退出操作已取消')
+          }
+          if(res.confirm){
+              this.saveAddress({})
+              this.saveToken('')
+              this.saveUserInfo({})
+              uni.$showMsg('您已成功退出')
+          }     
+        }
+      })
+    },
 		}
 	}
 </script>

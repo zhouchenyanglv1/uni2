@@ -3,7 +3,7 @@ export default{
 	
 	state:()=>({
 		address: JSON.parse(uni.getStorageSync('address')|| '{}'),
-		token:'',
+		token:uni.getStorageSync('token') || '',
 		userInfo: JSON.parse(uni.getStorageSync('userInfo') || '{}') 
 	}),
 	
@@ -15,7 +15,11 @@ export default{
 		saveUserInfo(state,object){
 			state.userInfo = object
 			uni.setStorageSync('userInfo',JSON.stringify(object))
-		}
+		},
+    saveToken(state,key){
+      state.token = key
+      uni.setStorageSync('token',key)
+    }
 		
 	},
 	

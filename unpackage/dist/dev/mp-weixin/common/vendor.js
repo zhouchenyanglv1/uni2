@@ -1430,7 +1430,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2630,9 +2630,9 @@ function normalizeComponent (
 /***/ }),
 
 /***/ 12:
-/*!*******************************************************************************************!*\
-  !*** E:/nodetest/uni2/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
-  \*******************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/vue/uni2/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2715,9 +2715,9 @@ var $http = new Request();exports.$http = $http;
 /***/ }),
 
 /***/ 121:
-/*!*****************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/index.js ***!
-  \*****************************************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/index.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2733,9 +2733,9 @@ var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 1
 /***/ }),
 
 /***/ 122:
-/*!****************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/en.json ***!
-  \****************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/en.json ***!
+  \***********************************************************************************/
 /*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
 /***/ (function(module) {
 
@@ -2744,9 +2744,9 @@ module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"shop\",\"uni-good
 /***/ }),
 
 /***/ 123:
-/*!*********************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hans.json ***!
-  \*********************************************************************************************/
+/*!****************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hans.json ***!
+  \****************************************************************************************/
 /*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
 /***/ (function(module) {
 
@@ -2755,9 +2755,9 @@ module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店铺\",\"uni-go
 /***/ }),
 
 /***/ 124:
-/*!*********************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hant.json ***!
-  \*********************************************************************************************/
+/*!****************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-goods-nav/components/uni-goods-nav/i18n/zh-Hant.json ***!
+  \****************************************************************************************/
 /*! exports provided: uni-goods-nav.options.shop, uni-goods-nav.options.cart, uni-goods-nav.buttonGroup.addToCart, uni-goods-nav.buttonGroup.buyNow, default */
 /***/ (function(module) {
 
@@ -2766,9 +2766,9 @@ module.exports = JSON.parse("{\"uni-goods-nav.options.shop\":\"店鋪\",\"uni-go
 /***/ }),
 
 /***/ 13:
-/*!***************************************!*\
-  !*** E:/nodetest/uni2/store/store.js ***!
-  \***************************************/
+/*!**********************************!*\
+  !*** D:/vue/uni2/store/store.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2791,9 +2791,9 @@ store;exports.default = _default;
 /***/ }),
 
 /***/ 132:
-/*!*******************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
-  \*******************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2809,9 +2809,9 @@ var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 1
 /***/ }),
 
 /***/ 133:
-/*!******************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
-  \******************************************************************************************/
+/*!*************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
+  \*************************************************************************************/
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
@@ -2820,9 +2820,9 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 /***/ }),
 
 /***/ 134:
-/*!***********************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
-  \***********************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
+  \******************************************************************************************/
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
@@ -2831,9 +2831,9 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 /***/ }),
 
 /***/ 135:
-/*!***********************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
-  \***********************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
+  \******************************************************************************************/
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
@@ -4099,9 +4099,9 @@ module.exports = index_cjs;
 /***/ }),
 
 /***/ 148:
-/*!***********************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpwxs.js ***!
-  \***********************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpwxs.js ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4193,9 +4193,9 @@ mpMixins;exports.default = _default;
 /***/ }),
 
 /***/ 149:
-/*!**************************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/bindingx.js ***!
-  \**************************************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/bindingx.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4506,9 +4506,9 @@ bindIngXMixins;exports.default = _default;
 /***/ }),
 
 /***/ 15:
-/*!**************************************!*\
-  !*** E:/nodetest/uni2/store/cart.js ***!
-  \**************************************/
+/*!*********************************!*\
+  !*** D:/vue/uni2/store/cart.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4593,9 +4593,9 @@ bindIngXMixins;exports.default = _default;
 /***/ }),
 
 /***/ 150:
-/*!*************************************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpother.js ***!
-  \*************************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-swipe-action/components/uni-swipe-action-item/mpother.js ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4863,9 +4863,9 @@ otherMixins;exports.default = _default;
 /***/ }),
 
 /***/ 16:
-/*!**************************************!*\
-  !*** E:/nodetest/uni2/store/user.js ***!
-  \**************************************/
+/*!*********************************!*\
+  !*** D:/vue/uni2/store/user.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4875,7 +4875,7 @@ otherMixins;exports.default = _default;
 
   state: function state() {return {
       address: JSON.parse(uni.getStorageSync('address') || '{}'),
-      token: '',
+      token: uni.getStorageSync('token') || '',
       userInfo: JSON.parse(uni.getStorageSync('userInfo') || '{}') };},
 
 
@@ -4887,6 +4887,10 @@ otherMixins;exports.default = _default;
     saveUserInfo: function saveUserInfo(state, object) {
       state.userInfo = object;
       uni.setStorageSync('userInfo', JSON.stringify(object));
+    },
+    saveToken: function saveToken(state, key) {
+      state.token = key;
+      uni.setStorageSync('token', key);
     } },
 
 
@@ -5726,9 +5730,9 @@ if (hadRuntime) {
 /***/ }),
 
 /***/ 26:
-/*!****************************************************!*\
-  !*** E:/nodetest/uni2/mixins/tabbar-cart-badge.js ***!
-  \****************************************************/
+/*!***********************************************!*\
+  !*** D:/vue/uni2/mixins/tabbar-cart-badge.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11749,7 +11753,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -11770,14 +11774,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -11863,7 +11867,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"uni-shop","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -12274,9 +12278,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 5:
-/*!***********************************!*\
-  !*** E:/nodetest/uni2/pages.json ***!
-  \***********************************/
+/*!******************************!*\
+  !*** D:/vue/uni2/pages.json ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -12285,9 +12289,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 94:
-/*!****************************************************************************!*\
-  !*** E:/nodetest/uni2/uni_modules/uni-icons/components/uni-icons/icons.js ***!
-  \****************************************************************************/
+/*!***********************************************************************!*\
+  !*** D:/vue/uni2/uni_modules/uni-icons/components/uni-icons/icons.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

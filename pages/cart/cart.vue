@@ -56,7 +56,9 @@
 		data() {
 			return {
 				getId: 0,
-				wh:0
+				wh:0,
+        second:3,
+        timer:null
 			};
 		},
 		onLoad(){
@@ -103,9 +105,35 @@
 			pay(){
 				if(this.total===0) return uni.$showMsg('请勾选要结算的商品')
 				if(!this.addressStr) return uni.$showMsg('请选择送货地址')
-				if(!this.token)  return uni.$showMsg('请先登录')  
+				if(!this.token)  {
+          this.delayToLogin()
+          return
+        } 
 				
-			}
+			},
+      showTips(n){
+        uni.showToast({
+          title:'请登录再结算'+n+'秒后将自动跳转',
+          icon:'none',
+          mask:true,
+          duration:1500
+        })
+      },
+      delayToLogin(){
+        this.showTips(this.second)
+       this.timer =  setInterval(()=>{
+            if(this.second<=1){
+              clearInterval(this.timer)
+              uni.switchTab({
+                url:'/pages/my/my',
+              })
+              this.second = 3
+              return
+            }
+            this.second --
+            this.showTips(this.second)
+        },1000)
+      }
 		}
 
 	}
