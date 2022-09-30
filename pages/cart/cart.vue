@@ -109,8 +109,27 @@
           this.delayToLogin()
           return
         } 
+        this.payOrder()
 				
 			},
+     async payOrder(){
+        const order = {
+          order_price: 0.01,
+          consignee_addr:  this.addressStr,
+          goods: this.cart.filter(item=>item.goods_state).map(item=>({ goods_id:item.goods_id,  goods_number:item.goods_count , goods_price:item.goods_price}))
+        }
+        const res = await uni.$http.post('/api/public/v1/my/orders/create',order)
+        if(res.statusCode !== 200) return uni.$showMsg('创建支付订单失败,请重试')
+        console.log(res.data.message.order_number);
+        const payId = {order_number:res.data.message.order_number }
+        const res2 = await uni.$http.post('/api/public/v1/my/orders/req_unifiedorder',payId)
+        if(res2.statusCode !==200) return uni.$showMsg('创建预付订单失败,请重试')
+        console.log(res2.data.message.pay);
+        const payInfo = res2.data.message.pay
+        const  [err ,res3] = await uni.requestPayment(payInfo)
+        if(err) return uni.$showMsg('订单未支付')
+        console.log(res3);
+},
       showTips(n){
         uni.showToast({
           title:'请登录再结算'+n+'秒后将自动跳转',

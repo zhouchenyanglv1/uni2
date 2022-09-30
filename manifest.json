@@ -1,5 +1,5 @@
 {
-    "name" : "uni-shop",
+    "name" : "卷卷商城",
     "appid" : "__UNI__03432DB",
     "description" : "",
     "versionName" : "1.0.0",
@@ -55,10 +55,9 @@
             "urlCheck" : false,
             "es6" : true
         },
-        "usingComponents" : true ,
-        "requiredPrivateInfos":[ "getLocation", "chooseAddress" ] 
-
-    }, 
+        "usingComponents" : true,
+        "requiredPrivateInfos" : [ "getLocation", "chooseAddress" ]
+    },
     "mp-alipay" : {
         "usingComponents" : true
     },

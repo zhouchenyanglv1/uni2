@@ -99,7 +99,7 @@ try {
       return Promise.all(/*! import() | components/my-userinfo/my-userinfo */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/my-userinfo/my-userinfo")]).then(__webpack_require__.bind(null, /*! @/components/my-userinfo/my-userinfo.vue */ 104))
     },
     myLogin: function() {
-      return Promise.all(/*! import() | components/my-login/my-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/my-login/my-login")]).then(__webpack_require__.bind(null, /*! @/components/my-login/my-login.vue */ 109))
+      return Promise.all(/*! import() | components/my-login/my-login */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/my-login/my-login")]).then(__webpack_require__.bind(null, /*! @/components/my-login/my-login.vue */ 111))
     }
   }
 } catch (e) {
